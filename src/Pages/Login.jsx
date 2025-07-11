@@ -29,7 +29,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "https://psquarebackend-1.onrender.com/login",
+        "https://psquarebackend-1.onrender.com/api/login",
         formData,
         {
           headers: {

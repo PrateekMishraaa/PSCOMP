@@ -28,7 +28,7 @@ const AddCandidate = ({ onClose }) => {
     }
 
     try {
-      const response = await axios.post("https://psquarebackend-1.onrender.com/new-candidate", formData, {
+      const response = await axios.post("https://psquarebackend-1.onrender.com/api/new-candidate", formData, {
         headers: {
           "Content-Type": "application/json"
         }
