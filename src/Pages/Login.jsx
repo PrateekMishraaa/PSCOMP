@@ -47,6 +47,7 @@ const Login = () => {
       }, 2000);
     } catch (error) {
       console.log("something went wrong",error);
+      toast.error("error",error)
       
     }
   };
