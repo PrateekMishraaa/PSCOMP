@@ -33,7 +33,7 @@ const AddCandidate = ({ onClose }) => {
           "Content-Type": "application/json"
         }
       });
-      toast.success("Congratulations! New candidate created");
+      toast.success("Congratulations! New candidate created",response);
       if (onClose) onClose(); // auto-close after success
     } catch (error) {
       console.error(error);
