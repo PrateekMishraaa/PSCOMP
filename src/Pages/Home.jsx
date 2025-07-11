@@ -35,7 +35,7 @@ useEffect(() => {
   const fetchData = async () => {
     try {
       const { data } = await axios.get(
-        'http://localhost:4000/api/candidates'
+        'https://psquarebackend-1.onrender.com/candidates'
       );
       console.log(data)
       setData(data.allcandidates);   // ← now this key exists
@@ -77,7 +77,7 @@ useEffect(() => {
         : 'pending';
 
     try {
-      await axios.put(`http://localhost:4000/api/status/${id}`, { Status: next });
+      await axios.put(`https://psquarebackend-1.onrender.com/status/${id}`, { Status: next });
       setData((prev) => prev.map((c) => (c._id === id ? { ...c, Status: next } : c)));
       toast.success(`Status updated to ${next}`);
     } catch (err) {
@@ -89,7 +89,7 @@ useEffect(() => {
   const handleDelete = async (id) => {
     if (!window.confirm('Are you sure you want to delete this candidate?')) return;
     try {
-      await axios.delete(`http://localhost:4000/api/delete-candidate/${id}`);
+      await axios.delete(`https://psquarebackend-1.onrender.com/delete-candidate/${id}`);
       setData((prev) => prev.filter((c) => c._id !== id));
       toast.success('Candidate deleted');
     } catch (err) {

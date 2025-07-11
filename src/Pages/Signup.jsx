@@ -46,7 +46,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/signup",
+        "https://psquarebackend-1.onrender.com/signup",
         {
           fullName,
           email,
